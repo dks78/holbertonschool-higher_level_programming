@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def exa(n):
     for i in range(1, n+1):
-        print(i ,"= 0x"+hex(i)[2:])
+        print(f"{i} = 0x{i:x}")
 exa(98)
