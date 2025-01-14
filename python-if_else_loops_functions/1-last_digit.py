@@ -7,8 +7,7 @@ if number < 0:
     LastNumber = -(-number % 10)  # Gère le dernier chiffre signé pour les négatifs
 else:
     LastNumber = number % 10
-
-# Affichage en fonction des consignes
+    
 if LastNumber > 5:
     print(f"Last digit of {number} is {LastNumber} and is greater than 5")
 elif LastNumber == 0:
