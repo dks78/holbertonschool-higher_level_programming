@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-for i in range(0, 10):
+for i in range(0, 9):
     for j in range(i + 1, 10):
         if i == 8 and j == 9:
-            print(f"{i}{j}")  # Pas de virgule pour le dernier élément
+            print("{}{}".format(i, j))  # Dernière combinaison sans virgule
         else:
-            print(f"{i}{j}, ", end="")
+            print("{}{}, ".format(i, j), end="")  # Combinaison avec virgule et espace
