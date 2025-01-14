@@ -7,7 +7,7 @@ def fizzbuzz():
         elif i % 3 == 0:  # Si divisible uniquement par 3
             print("Fizz ", end="")
         elif i % 5 == 0:  # Si divisible uniquement par 5
-             print("Buzz ", end="")
+            print("Buzz ", end="")
         else:  # Sinon afficher le nombre
             print("{} ".format(i), end="")
             
