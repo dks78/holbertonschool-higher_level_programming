@@ -21,3 +21,4 @@ if number == 0 :
     print(f"{number} is nul")
 if number < 0:
     print(f"{number} is négatif")
+print()
