@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 #"""""Ce programme affectera un nombre signé aléatoire à la variable numéro à chaque fois qu'il sera exécuté. Complétez le code source afin d'indiquer si le nombre stocké dans la variable number est positif ou négatif.
 
 #Vous trouverez le code source ici
@@ -11,7 +14,7 @@
 #suivi d'une nouvelle ligne
 
 #Traduit avec DeepL.com (version gratuite)"""
-#!/usr/bin/python3
+
 import random
 number = random.randint(-10, 10)
 
