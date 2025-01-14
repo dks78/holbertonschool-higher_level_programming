@@ -3,9 +3,8 @@ import random
 
 number = random.randint(-10000, 10000)
 
-# Récupérer le dernier chiffre correctement, en tenant compte des nombres négatifs
 if number < 0:
-    last_digit = -(-number % 10)  # Gère le dernier chiffre signé pour les négatifs
+    last_digit = -(-number % 10)
 else:
     last_digit = number % 10
 
