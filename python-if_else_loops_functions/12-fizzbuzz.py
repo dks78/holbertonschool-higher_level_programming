@@ -10,4 +10,3 @@ def fizzbuzz():
             print("Buzz", end=" ")  # Afficher "Buzz"
         else:  # Sinon afficher le nombre
             print(i, end=" ")  # Afficher le nombre
-    print()  # Ajouter un saut de ligne à la fin
