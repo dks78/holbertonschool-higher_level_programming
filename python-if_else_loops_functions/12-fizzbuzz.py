@@ -9,4 +9,4 @@ def fizzbuzz():
         elif i % 5 == 0:  # Si divisible uniquement par 5
             print("Buzz", end=" ")  # Afficher "Buzz" suivi d'un espace
         else:  # Sinon afficher le nombre
-            print(i, end=" ")
+            print("{} ".format(i), end="")
