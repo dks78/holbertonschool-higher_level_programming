@@ -1,21 +1,24 @@
 #!/usr/bin/python3
+import sys
+
 def no_of_argu(*args):
     return len(args)
 
-def display_arguments(*args):
-    # Récupère le nombre d'arguments
+def display_arguments():
+    # Utiliser sys.argv pour obtenir les arguments passés
+    args = sys.argv[1:]  # On exclut le nom du script, qui est sys.argv[0]
     num_args = no_of_argu(*args)
 
     # Affiche le nombre d'arguments et le type (argument ou arguments)
-   
-    print(f"{num_args } arguments :")
-    
-    for i, arg in enumerate(args, 1):
-        print(f"{i}: {arg}")
+    if num_args == 0:
+        print("0 arguments.")
+    else:
+        print(f"{num_args} argument{'s' if num_args > 1 else ''} :")
 
-# Variables
-a = 1
-b = 3
+        # Affiche chaque argument avec sa position
+        for i, arg in enumerate(args, 1):
+            print(f"{i}: {arg}")
 
-# Appel de la fonction avec plusieurs arguments
-display_arguments("Hello", "Welcome", "To", "The", "Best", "School")
+# Appel de la fonction
+if __name__ == "__main__":
+    display_arguments()
