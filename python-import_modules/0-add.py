@@ -8,5 +8,6 @@ if __name__ == "__main__":
 
     a = 1  # Définir la valeur de a
     b = 2  # Définir la valeur de b
-
     print("{} + {} = {}".format(a, b, add(a, b)))
+
+
