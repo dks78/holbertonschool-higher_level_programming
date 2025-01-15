@@ -16,7 +16,7 @@ def display_arguments():
         print(f"{num_args} argument{'s' if num_args > 1 else ''} :")
 
         # Affiche chaque argument avec sa position
-        for i, arg in enumerate(args, 1):s
+        for i, arg in enumerate(args, 1):
             print(f"{i}: {arg}")
 
 # Appel de la fonction
