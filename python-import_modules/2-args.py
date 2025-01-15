@@ -10,17 +10,12 @@ def display_arguments(*args):
    
     print(f"{num_args } arguments :")
     
-
-    print(args[0],": Hello")
-    print(args[1],": Welcome")
-    print(args[2],": To ")
-    print(args[3],": The ")
-    print(args[4],": Best")
-    print(args[5],": School")
+    for i, arg in enumerate(args, 1):
+        print(f"{i}: {arg}")
 
 # Variables
 a = 1
 b = 3
 
 # Appel de la fonction avec plusieurs arguments
-display_arguments(1, 2, 3, 4, 5, 6)
+display_arguments("Hello", "Welcome", "To", "The", "Best", "School")
