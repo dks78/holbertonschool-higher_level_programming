@@ -1,24 +1,22 @@
 #!/usr/bin/python3
 import sys
 
-def no_of_argu(*args):
-    return len(args)
+def no_of_argu():
+    return len(sys.argv) - 1  # Exclure le nom du script (sys.argv[0])
 
 def display_arguments():
-    # Utiliser sys.argv pour obtenir les arguments passés
-    args = sys.argv[1:]  # On exclut le nom du script, qui est sys.argv[0]
-    num_args = no_of_argu(*args)
+    num_args = no_of_argu()
 
-    # Affiche le nombre d'arguments et le type (argument ou arguments)
+    # Affiche le nombre d'arguments
     if num_args == 0:
-        print("0 arguments.")
+        print("Number of argument(s): .")
     else:
-        print(f"{num_args} argument{'s' if num_args > 1 else ''} :")
+        print(f"Number of argument(s): {num_args} argument{'s' if num_args > 1 else ''} :")
 
         # Affiche chaque argument avec sa position
-        for i, arg in enumerate(args, 1):
-            print(f"{i}: {arg}")
+        for i in range(1, num_args + 1):  # Les arguments commencent à l'index 1
+            print(f"{i}: {sys.argv[i]}")
 
-# Appel de la fonction
+# Le code ne doit pas être exécuté si ce fichier est importé
 if __name__ == "__main__":
     display_arguments()
