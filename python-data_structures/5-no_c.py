@@ -1,11 +1,7 @@
+#!/usr/bin/python3
 def no_c(my_string):
-    result = ""
-    
-    # Parcours chaque caractère de la chaîne
-    for char in my_string:
-        # Si le caractère n'est pas 'c' ou 'C', on l'ajoute à result
-        if char.lower() != 'c':
-            result += char
-    
-    # Retourne la chaîne modifiée
-    return result
+    new_string = ""
+    for i in range(len(my_string)):
+        if my_string[i] != 'c' and my_string[i] != 'C':
+            new_string += my_string[i:(i + 1)]
+    return(new_string)
