@@ -1,13 +1,22 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    # Créer une nouvelle matrice vide
+    # Initialisation de la nouvelle matrice vide
     new_matrix = []
     
-    # Parcourir chaque ligne de la matrice
+    # Parcours de chaque ligne de la matrice d'origine
     for row in matrix:
-        # Créer une nouvelle ligne avec les carrés des éléments de la ligne
-        new_row = [x**2 for x in row]
-        # Ajouter cette nouvelle ligne à la nouvelle matrice
+        # Création d'une nouvelle ligne vide pour stocker les carrés
+        new_row = []
+        
+        # Parcours de chaque élément de la ligne
+        for element in row:
+            # Calcul du carré de l'élément
+            squared_element = element ** 2
+            # Ajout du carré à la nouvelle ligne
+            new_row.append(squared_element)
+        
+        # Ajout de la nouvelle ligne à la nouvelle matrice
         new_matrix.append(new_row)
     
+    # Retour de la nouvelle matrice
     return new_matrix
