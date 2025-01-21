@@ -2,11 +2,13 @@
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     try:
-        for i in range(min(x, len(my_list))):  # Ensure we don't exceed the list size
-            if isinstance(my_list[i], int):  # Check if the element is an integer
-                print("{:d}".format(my_list[i]), end="")  # Print integer without space
-                count += 1  # Increment the count of integers printed
-    except IndexError:
-        pass  # If x is greater than the length of my_list, we silently skip the error
-    print()  # Print a newline after all integers are printed
+        if x > len(my_list):  # Si x est plus grand que la longueur de la liste
+            raise IndexError("list index out of range")  # Lancer une exception manuellement
+        for i in range(x):
+            if isinstance(my_list[i], int):
+                print("{:d}".format(my_list[i]), end="")
+                count += 1
+    except IndexError as e:
+        print(f"\n{e}")  # Afficher le message d'erreur IndexError
+    print()
     return count
