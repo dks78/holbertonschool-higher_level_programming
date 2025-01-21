@@ -1,28 +1,32 @@
 #!/usr/bin/python3
+
 def list_division(my_list_1, my_list_2, list_length):
     result = []
 
-    # Vérification si les listes sont assez longues
+    # Vérification si les listes sont trop courtes
     if len(my_list_1) < list_length or len(my_list_2) < list_length:
         print("out of range")
     
-    # Itération jusqu'à la longueur maximale des deux listes
+    # Parcours des indices jusqu'à la longueur spécifiée
     for i in range(list_length):
-        # Si on est hors des limites des listes, ajouter 0 et passer à l'itération suivante
-        if i >= len(my_list_1) or i >= len(my_list_2):
-            result.append(0)
-            continue
-        
-        # Vérifier si les éléments à cet index sont des nombres (int ou float)
-        if isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float)):
-            # Vérifier si la division par zéro est tentée
-            if my_list_2[i] == 0:
-                print("division by 0")
-                result.append(0)  # Ajouter 0 au résultat si division par zéro
+        try:
+            # Vérification de la division par zéro et du type des éléments
+            if isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float)):
+                if my_list_2[i] == 0:
+                    print("division by 0")
+                    result.append(0)  # Division par zéro
+                else:
+                    result.append(my_list_1[i] / my_list_2[i])  # Division correcte
             else:
-                result.append(my_list_1[i] / my_list_2[i])  # Effectuer la division
-        else:
-            print("wrong type")
-            result.append(0)  # Ajouter 0 si le type est incorrect
-    
+                print("wrong type")
+                result.append(0)  # Mauvais type de données
+        except IndexError:
+            # Si un indice dépasse la longueur des listes
+            print("out of range")
+            result.append(0)  # Ajouter 0 dans le cas d'une exception (hors de portée)
+        except Exception as e:
+            # Si une autre exception se produit
+            print(f"Error: {e}")
+            result.append(0)
+
     return result
