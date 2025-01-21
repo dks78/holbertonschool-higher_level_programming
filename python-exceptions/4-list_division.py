@@ -1,32 +1,32 @@
 #!/usr/bin/python3
+# 4-list_division.py
+# Brennan D Baraban <375@holbertonschool.com>
+
 
 def list_division(my_list_1, my_list_2, list_length):
-    result = []
+    """Divides two lists element by element.
 
-    # Vérification si les listes sont trop courtes
-    if len(my_list_1) < list_length or len(my_list_2) < list_length:
-        print("out of range")
-    
-    # Parcours des indices jusqu'à la longueur spécifiée
-    for i in range(list_length):
+    Args:
+        my_list_1 (list): The first list.
+        my_list_2 (list): The second list.
+        list_length (int): The number of elements to divide.
+
+    Returns:
+        A new list of length list_length containing all the divisions.
+    """
+    new_list = []
+    for i in range(0, list_length):
         try:
-            # Vérification de la division par zéro et du type des éléments
-            if isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float)):
-                if my_list_2[i] == 0:
-                    print("division by 0")
-                    result.append(0)  # Division par zéro
-                else:
-                    result.append(my_list_1[i] / my_list_2[i])  # Division correcte
-            else:
-                print("wrong type")
-                result.append(0)  # Mauvais type de données
+            div = my_list_1[i] / my_list_2[i]
+        except TypeError:
+            print("wrong type")
+            div = 0
+        except ZeroDivisionError:
+            print("division by 0")
+            div = 0
         except IndexError:
-            # Si un indice dépasse la longueur des listes
             print("out of range")
-            result.append(0)  # Ajouter 0 dans le cas d'une exception (hors de portée)
-        except Exception as e:
-            # Si une autre exception se produit
-            print(f"Error: {e}")
-            result.append(0)
-
-    return result
+            div = 0
+        finally:
+            new_list.append(div)
+    return (new_list)
