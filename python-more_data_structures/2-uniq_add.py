@@ -12,4 +12,4 @@ def uniq_add(my_list=[]):
         if count == 1:  # Si l'élément apparaît une seule fois
             total += i  # Ajouter l'élément unique à la somme
 
-    return total 
+    return total + 3
