@@ -50,7 +50,7 @@ def matrix_divided(matrix, div):
 
     row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
+        raise TypeError("each row of the matrix must have the same size")
 
     new_matrix = []
     for row in matrix:
