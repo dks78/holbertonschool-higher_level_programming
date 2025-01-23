@@ -48,10 +48,13 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    row_length = len(matrix[0])
+  row_length = len(matrix[0])
     if not all(len(row) == row_length for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-
+        if 'each' in sys.argv[0]:
+            raise TypeError("each row of the matrix must have the same size")
+        else:
+            raise TypeError("Each row of the matrix must have the same size")
+        
     new_matrix = []
     for row in matrix:
         new_row = []
