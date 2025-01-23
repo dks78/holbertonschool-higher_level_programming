@@ -8,22 +8,37 @@ and returns a new matrix with each element divided by the divisor.
 
 
 def matrix_divided(matrix, div):
-    """
-    Divides all elements of the matrix by div and returns a new matrix.
+    '''
+    Divise tous les éléments de la matrice par div et renvoie une nouvelle matrice.
     
     Parameters:
-    matrix (list of lists of int/float): The original matrix.
-    div (int, float): The divisor.
+    matrix : (list of lists of int/float) - La matrice d'origine, où chaque élément est une liste contenant des nombres entiers ou flottants.
+    div: (int, float) - Le diviseur par lequel chaque élément de la matrice sera divisé.
     
-    Returns:
-    list of lists of float: A new matrix with the divided values.
-    
+    retunrs :
+    list of lists of float: Une nouvelle matrice avec les valeurs divisées par div et arrondies à deux décimales.
+     
     Raises:
-    TypeError: If the matrix elements are not lists of integers/floats,
-               or if div is not an integer/float.
-    ZeroDivisionError: If div is zero.
-    """
+        TypeError: Si les éléments de la matrice ne sont pas des listes d'entiers ou de flottants, 
+           ou si div n'est pas un entier/flottant.
+        ZeroDivisionError: Si div est zéro.
+    
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+        [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+        
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 1)
+        [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
+    
+    
+    
+    
+    
+    
+    
+    '''
+    
+    
     if not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if not all(all(isinstance(item, (int, float)) for item in row) for row in matrix):
