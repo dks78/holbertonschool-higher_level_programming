@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module contains the matrix_divided function.
+
+The matrix_divided function takes a matrix and a divisor,
+and returns a new matrix with each element divided by the divisor.
+"""
 def matrix_divided(matrix, div):
     
    """
