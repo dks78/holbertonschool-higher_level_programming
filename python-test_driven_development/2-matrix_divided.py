@@ -5,9 +5,10 @@ This module contains the matrix_divided function.
 The matrix_divided function takes a matrix and a divisor,
 and returns a new matrix with each element divided by the divisor.
 """
+
+
 def matrix_divided(matrix, div):
-    
-   """
+    """
     Divides all elements of the matrix by div and returns a new matrix.
     
     Parameters:
@@ -22,7 +23,16 @@ def matrix_divided(matrix, div):
                or if div is not an integer/float.
     ZeroDivisionError: If div is zero.
     """
-    
+
+    if not all(isinstance(row, list) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(all(isinstance(item, (int, float)) for item in row) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+
     new_matrix = []
     for row in matrix:
         new_row = []
