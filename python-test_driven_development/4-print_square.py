@@ -3,7 +3,10 @@
 module : function print to sqaure
 
 """
+
+
 def print_square(size):
+
     """
     Fonction pour imprimer un carré
     Function to print a square
@@ -27,6 +30,6 @@ def print_square(size):
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
-    
+
     for _ in range(size):
         print("#" * size)
