@@ -31,9 +31,15 @@ def text_indentation(text):
     
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for i in text:
-        if i == "." or i == "?" or i == ":" or i == ",":
-            print(i, end="\n")
-            print()
+    i = 0
+    while i < len(text):
+        # Si on trouve un des caractères qui nécessite un saut de ligne
+        if text[i] in ".?:":
+            print(text[i], end="\n")  # Ajouter un seul saut de ligne après le caractère
+            i += 1
+            # Ignorer les espaces blancs après le caractère spécial
+            while i < len(text) and text[i] == " ":
+                i += 1
         else:
-            print(i, end="")
+            print(text[i], end="")  # Imprimer les caractères normalement
+            i += 1

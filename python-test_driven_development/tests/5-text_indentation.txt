@@ -7,6 +7,8 @@
 >>> text_indentation("No special chars here")
 No special chars here
 
-
-
-
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+School?
+How are you:
+John
