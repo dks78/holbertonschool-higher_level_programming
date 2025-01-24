@@ -40,10 +40,9 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for i in text:
-        if text[i] in ".?:":
-            print(text[i], end="\n")  # Imprimer le caractère avec un saut de ligne
-            if i + 1 < len(text) and text[i + 1] == " ":
-                i += 1  # Ignorer les espaces après le caractère de ponctuation
-            print()  # Ajouter une ligne vide après le saut de ligne
+        if i == "." or i == "?" or i == ":" or i == ",":
+            print(i, end="\n")
+            print()
         else:
-            print(text[i], end="") 
+            print(i, end="")
+            
