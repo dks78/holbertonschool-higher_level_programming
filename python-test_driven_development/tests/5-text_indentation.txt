@@ -1,0 +1,12 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text_indentation("")
+>>> # (Empty output since the string is empty)
+
+>>> text_indentation("No special chars here")
+No special chars here
+
+
+
+
