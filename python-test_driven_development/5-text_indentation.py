@@ -1,39 +1,35 @@
 #!/usr/bin/python3
+"""Module built for Python 0x07 task 4. Error in project formatting scheme \
+advances file numbering +1 for every task after 0.
 """
-module : function to indation text
 
-"""
+
 def text_indentation(text):
-    """
-    Function that prints a text with 2 new lines after each of these characters: '.', '?', ':'.
+    """Function that prints text with 2 new lines after each of the \
+characters '.',',', and '?' :
 
     Args:
-        text (str): The text to be formatted.
+        text (str): text to be edited
 
-    Raises:
-        TypeError: If text is not a string.
-
-    Examples:
-    >>> text_indentation("Hello. How are you? I'm fine: thanks!")
-    Hello.
-    
-    How are you?
-    
-    I'm fine:
-    
-    thanks!
-    
-    >>> text_indentation("")
-    
-    >>> text_indentation("No special chars here")
-    No special chars here
     """
-    
-    if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    for i in text:
-        if i == "." or i == "?" or i == ":" or i == ",":
-            print(i, end="\n")
-            print()
+    if type(text) is not str:
+        raise TypeError('text must be a string')
+
+    j = 0
+    delims = '.?:'
+
+    for i, char in enumerate(text):
+        for delim in delims:
+            if char is delim:
+                j += 1
+                text = text[:i + j] + ' ' + text[i + j:]
+
+    list = text.split()
+
+    for word in list:
+        if word[-1:] is "." or word[-1:] is "?" or word[-1:] is ":":
+            print(word, end="\n\n")
+        elif word is list[len(list) - 1]:
+            print(word, end="")
         else:
-            print(i, end="")
+            print(word, end=" ")
