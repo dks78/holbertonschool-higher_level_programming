@@ -1,9 +1,8 @@
 """
-Ce module contient des fonctions et des classes pour gérer des formes géométriques,
-y compris la définition de carrés et de calculs associés.
+Module: geometric_shapes
 
-Les fonctions dans ce module permettent de calculer des propriétés géométriques comme l'aire,
-le périmètre, etc.
+Ce module contient des classes et des fonctions pour manipuler des formes géométriques simples,
+comme le carré. Il permet de calculer des propriétés géométriques telles que l'aire et le périmètre.
 """
 
 def aire_carre(cote):
@@ -15,10 +14,6 @@ def aire_carre(cote):
 
     Retour:
     float: L'aire du carré, c'est-à-dire cote^2.
-    
-    Exemple:
-    >>> aire_carre(5)
-    25
     """
     return cote ** 2
 
@@ -31,10 +26,6 @@ def perimetre_carre(cote):
 
     Retour:
     float: Le périmètre du carré, c'est-à-dire 4 * cote.
-
-    Exemple:
-    >>> perimetre_carre(5)
-    20
     """
     return 4 * cote
 
@@ -61,11 +52,6 @@ class Square:
 
         Retour:
         float: L'aire du carré.
-        
-        Exemple:
-        >>> s = Square(5)
-        >>> s.aire()
-        25
         """
         return self.cote ** 2
 
@@ -75,10 +61,5 @@ class Square:
 
         Retour:
         float: Le périmètre du carré.
-        
-        Exemple:
-        >>> s = Square(5)
-        >>> s.perimetre()
-        20
         """
         return 4 * self.cote
