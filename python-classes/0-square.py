@@ -12,10 +12,13 @@ Exemple d'utilisation:
     print(square.aire())
 """
 class Square:
-     """
+    """
     Représente un carré.
 
     Cette classe est une représentation d'un carré géométrique.
-    Actuellement, elle est vide, mais des méthodes et attributs peuvent être ajoutés pour calculer des propriétés telles que l'aire, la périmètre, etc.
+    Elle peut être étendue avec des méthodes pour calculer des propriétés comme l'aire ou le périmètre.
     """
     pass
+
+# Affichage de la documentation
+print(Square.__doc__)
