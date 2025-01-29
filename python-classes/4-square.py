@@ -1,29 +1,56 @@
 #!/usr/bin/python3
+"""Module that defines a Square class."""
+
+
 class Square:
-    """Classe qui définit un carré avec un attribut privé size."""
+    """A class that represents a square."""
 
     def __init__(self, size=0):
-        """Initialise un carré avec une taille optionnelle."""
+        """Initialize a square.
+        
+        Args:
+            size (int): The size of the square. Defaults to 0.
+        
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size  # On affecte size seulement après validation
+        self.__size = size
 
     @property
     def size(self):
-        """Getter pour récupérer la taille du carré."""
+        """Getter for the size attribute.
+        
+        Returns:
+            int: The size of the square.
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setter pour modifier la taille du carré avec validation."""
+        """Setter for the size attribute.
+        
+        Args:
+            value (int): The new size of the square.
+        
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def area(self):
-        """Retourne l'aire du carré."""
+        """Calculate and return the area of the square.
+        
+        Returns:
+            int: The area of the square.
+        """
         return self.__size ** 2
