@@ -2,23 +2,19 @@
 
 """
 This module defines a Rectangle class with width and height properties.
-It includes validation to ensure that width ands.
+It includes validation to ensure that width and height are integers and greater than or equal to 0.
 """
 
-
 class Rectangle:
-
     """A class that defines a rectangle with width and height attributes."""
 
     def __init__(self, width=0, height=0):
-
         """
         Initializes a rectangle with given width and height.
 
         :param width: The width of the rectangle (must be an integer >= 0).
         :param height: The height of the rectangle (must be an integer >= 0).
         """
-
         self.width = width
         self.height = height
 
@@ -55,40 +51,58 @@ class Rectangle:
         """
         return self.__height
 
-    def area(self):
-        return self.height * self.width
-
-    def perimeter(self):
-        if self.width == 0 or self.height == 0:
-            return 0
-        return 2 * (self.height + self.width)
-
     @height.setter
     def height(self, value):
-
         """
         Setter method to set the height with validation.
+
         :param value: The new height value.
         :raises TypeError: If the value is not an integer.
         :raises ValueError: If the value is negative.
         """
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __str__(self):
+    def area(self):
+        """
+        Calculates the area of the rectangle.
+
+        :return: The area of the rectangle (width * height).
+        """
+        return self.height * self.width
+
+    def perimeter(self):
+        """
+        Calculates the perimeter of the rectangle.
+
+        :return: The perimeter of the rectangle, or 0 if width or height is 0.
+        """
         if self.width == 0 or self.height == 0:
-            return ""
+            return 0
+        return 2 * (self.height + self.width)
+
+    def __str__(self):
+        """
+        String representation of the rectangle using "#" characters.
+
+        :return: A string that visualizes the rectangle, or an empty string if width or height is 0.
+        """
+        if self.width == 0 or self.height == 0:
+            return ""  # If width or height is 0, return an empty string.
 
         rectangle_str = ""
         for _ in range(self.height):
-            rectangle_str += "#" * self.width + "\n"
+            rectangle_str += "#" * self.width + "\n"  # Add a row of "#" for each height.
 
-        return rectangle_str.strip()
+        return rectangle_str.strip()  # Remove the trailing newline at the end.
+
     def __repr__(self):
-        return f"Rectangle(width={self.width}, height={self.height})"
-        new_rectangle = eval(repr(my_rectangle))
+        """
+        Return a string that can be used to recreate the rectangle object.
 
+        :return: A string representation of the Rectangle object in the form "Rectangle(width=x, height=y)".
+        """
+        return f"Rectangle(width={self.width}, height={self.height})"
