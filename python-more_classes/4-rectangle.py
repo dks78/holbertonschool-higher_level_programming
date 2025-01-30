@@ -99,8 +99,10 @@ class Rectangle:
 
         return rectangle_str.strip()  # Remove the trailing newline at the end.
 
-   def __repr__(self):
-        """Return the string representation of the Rectangle."""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
+    def __repr__(self):
+        """
+        Return a string that can be used to recreate the rectangle object.
+
+        :return: A string representation of the Rectangle object in the form "Rectangle(width=x, height=y)".
+        """
+        return f"Rectangle(width={self.width}, height={self.height})"
