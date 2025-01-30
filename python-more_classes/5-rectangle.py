@@ -102,12 +102,13 @@ class Rectangle:
         return rectangle_str.strip()
 
     def __repr__(self):
-        
+
         """
         Return a string that can be used to recreate the rectangle object.
 
         :return: A string representation of the Rectangle
         """
         return f"Rectangle({self.width}, {self.height})"
+
     def __del__(self):
         print("Bye rectangle...")
