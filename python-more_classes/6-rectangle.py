@@ -10,6 +10,7 @@ are integers and greater than or equal to 0.
 class Rectangle:
     """A class that defines a rectangle with width and height attributes."""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializes a rectangle with given width and height.
@@ -20,12 +21,15 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
     @classmethod
     def get_number_of_instances(cls):
+
         """
         Retourne le nombre d'instances de la classe.
         """
         return cls.number_of_instances
+
     @property
     def width(self):
         """
