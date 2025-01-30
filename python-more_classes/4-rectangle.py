@@ -105,4 +105,6 @@ class Rectangle:
 
         :return: A string representation of the Rectangle object in the form "Rectangle(width=x, height=y)".
         """
-        return f"Rectangle(width={self.width}, height={self.height})"
+        return f"Rectangle({self.width}, {self.height})"
+
+
