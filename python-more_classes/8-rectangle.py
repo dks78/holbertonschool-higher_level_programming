@@ -126,7 +126,7 @@ class Rectangle:
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-        
+
     def bigger_or_equal(rect_1, rect_2):
         # Vérifier si rect_1 est une instance de Rectangle
         if not isinstance(rect_1, Rectangle):
@@ -135,9 +135,7 @@ class Rectangle:
         # Vérifier si rect_2 est une instance de Rectangle
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 doit être une instance de Rectangle")
-        
-        # Comparer les surfaces des deux rectangles
+
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-         
