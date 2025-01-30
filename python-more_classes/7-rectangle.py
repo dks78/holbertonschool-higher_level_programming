@@ -6,8 +6,11 @@ It includes validation to ensure that width and height
 are integers and greater than or equal to 0.
 """
 
+
 class Rectangle:
+
     """A class that defines a rectangle with width and height attributes."""
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -119,9 +122,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Decrements the number of instances upon deletion and prints a goodbye message.
+        Decrements the number of instances
         """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-
