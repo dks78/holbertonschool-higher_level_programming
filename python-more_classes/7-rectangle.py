@@ -6,11 +6,11 @@ It includes validation to ensure that width and height
 are integers and greater than or equal to 0.
 """
 
-
 class Rectangle:
     """A class that defines a rectangle with width and height attributes."""
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """
         Initializes a rectangle with given width and height.
@@ -21,9 +21,9 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
     @classmethod
     def get_number_of_instances(cls):
-
         """
         Retourne le nombre d'instances de la classe.
         """
@@ -97,7 +97,7 @@ class Rectangle:
 
     def __str__(self):
         """
-        String representation of the rectangle using "#" characters.
+        String representation of the rectangle using print_symbol characters.
 
         :return: A string that visualizes the rectangle,
         """
@@ -107,11 +107,9 @@ class Rectangle:
         rectangle_str = ""
         for _ in range(self.height):
             rectangle_str += str(self.print_symbol) * self.width + "\n"
-        print(self.print_symbol)
-        return rectangle_str.strip()
+        return rectangle_str.strip()  # Remove trailing newline
 
     def __repr__(self):
-
         """
         Return a string that can be used to recreate the rectangle object.
 
@@ -120,5 +118,10 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
+        """
+        Decrements the number of instances upon deletion and prints a goodbye message.
+        """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+
