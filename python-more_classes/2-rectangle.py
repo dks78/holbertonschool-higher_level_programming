@@ -5,6 +5,7 @@ This module defines a Rectangle class with width and height properties.
 It includes validation to ensure that width ands.
 """
 
+
 class Rectangle:
 
     """A class that defines a rectangle with width and height attributes."""
@@ -54,12 +55,12 @@ class Rectangle:
         """
         return self.__height
 
-
     def area(self):
         return self.height * self.width
+
     def perimeter(self):
         return 2 * (self.height + self.width)
-        
+
     @height.setter
     def height(self, value):
 
