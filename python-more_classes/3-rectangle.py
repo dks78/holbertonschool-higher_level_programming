@@ -81,5 +81,11 @@ class Rectangle:
         
     def __str__(self):
         if self.width == 0 or self.height == 0:
-            return ""  # Si largeur ou hauteur == 0, on retourne une chaîne vide
-        return "\n".join(["#" * self.width for _ in range(self.height)])
+            return ""
+    
+        rectangle_str = ""
+        for _ in range(self.height):
+            rectangle_str += "#" * self.width + "\n"
+    
+        return rectangle_str.strip()
+
