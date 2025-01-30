@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-Square = __import__('1-square').Square
+Rectangle = __import__('1-rectangle').Rectangle
 
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
+my_rectangle = Rectangle(2, 4)
+print(my_rectangle.__dict__)
 
-try:
-    print(my_square.size)
-except Exception as e:
-    print(e)
+my_rectangle.width = 10
+my_rectangle.height = 3
+print(my_rectangle.__dict__)
 
-try:
-    print(my_square.__size)
-except Exception as e:
-    print(e)
