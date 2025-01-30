@@ -2,8 +2,10 @@
 
 """
 This module defines a Rectangle class with width and height properties.
-It includes validation to ensure that width and height are integers and greater than or equal to 0.
+It includes validation to ensure that width and height
+are integers and greater than or equal to 0.
 """
+
 
 class Rectangle:
     """A class that defines a rectangle with width and height attributes."""
@@ -88,23 +90,21 @@ class Rectangle:
         """
         String representation of the rectangle using "#" characters.
 
-        :return: A string that visualizes the rectangle, or an empty string if width or height is 0.
+        :return: A string that visualizes the rectangle,
         """
         if self.width == 0 or self.height == 0:
             return ""  # If width or height is 0, return an empty string.
 
         rectangle_str = ""
         for _ in range(self.height):
-            rectangle_str += "#" * self.width + "\n"  # Add a row of "#" for each height.
+            rectangle_str += "#" * self.width + "\n"
 
-        return rectangle_str.strip()  # Remove the trailing newline at the end.
+        return rectangle_str.strip()
 
     def __repr__(self):
         """
         Return a string that can be used to recreate the rectangle object.
 
-        :return: A string representation of the Rectangle object in the form "Rectangle(width=x, height=y)".
+        :return: A string representation of the Rectangle
         """
         return f"Rectangle({self.width}, {self.height})"
-
-
