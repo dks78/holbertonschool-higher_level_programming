@@ -78,14 +78,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-        
+
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-    
+
         rectangle_str = ""
         for _ in range(self.height):
             rectangle_str += "#" * self.width + "\n"
-    
-        return rectangle_str.strip()
 
+        return rectangle_str.strip()
