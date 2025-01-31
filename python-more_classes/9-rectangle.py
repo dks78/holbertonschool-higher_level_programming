@@ -58,13 +58,21 @@ class Rectangle:
         return 2 * (self.width + self.height)
     
     def __str__(self):
-        """Returns the string representation of the rectangle with the # symbol."""
-        if self.width == 0 or self.height == 0:
-            return ""  # If width or height is 0, return an empty string
-        return (str(self.print_symbol) * self.width + "\n") * self.height
+        """Return the printable representation of the Rectangle.
+
+        Represents the rectangle with the # character.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
     
     def __repr__(self):
-        """Returns a string that allows recreating the object using eval()."""
         return f"Rectangle({self.width}, {self.height})"
     
     def __del__(self):
