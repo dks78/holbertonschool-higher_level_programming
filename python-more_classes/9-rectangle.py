@@ -60,18 +60,17 @@ class Rectangle:
     def __str__(self):
         """Return the printable representation of the Rectangle.
 
-        Represents the rectangle with the # character.
+        Represents the rectangle with the print_symbol character.
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
-        
-        if self.width == 0 or self.height == 0:
-            return ""  # If width or height is 0, return an empty string.
+            return ""
 
-        rectangle_str = ""
-        for _ in range(self.height):
-            rectangle_str += str(self.print_symbol) * self.width + "\n"
-        return rectangle_str.strip() 
+    # Create one row of the rectangle
+        row = str(self.print_symbol) * self.__width
+
+    # Repeat the row for height times and join with newline characters
+        return "\n".join([row] * self.__height)
+
 
 
     
