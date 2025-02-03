@@ -65,9 +65,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         
-        row = str(self.print_symbol) * self.__width
-        
-        return "\n".join(row for _ in range(self.__height))
+        if self.width == 0 or self.height == 0:
+            return ""  # If width or height is 0, return an empty string.
+
+        rectangle_str = ""
+        for _ in range(self.height):
+            rectangle_str += str(self.print_symbol) * self.width + "\n"
+        return rectangle_str.strip() 
 
 
     
