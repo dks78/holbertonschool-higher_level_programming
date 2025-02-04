@@ -3,17 +3,27 @@
 Module BaseGeometry
 ====================
 
-This module defines an empty class `BaseGeometry`.
+This module defines a class `BaseGeometry` with a method `area()`.
 
 Classes:
 --------
-- BaseGeometry: An empty class that serves as a base for geometric shapes.
+- BaseGeometry: A base class for geometric operations.
 """
+
 class BaseGeometry:
     """
-    to léve exeption area 
+    A base class for geometry-related operations.
 
-    This class is currently empty and
+    Methods:
+    --------
+    - area(self): Raises an Exception with the message "area() is not implemented".
     """
+
     def area(self):
-        raise Exception("the message area() is not implemented")
+        """
+        Raises an Exception indicating that the method is not yet implemented.
+
+        Raises:
+            Exception: Always raises with the message "area() is not implemented".
+        """
+        raise Exception("area() is not implemented")
