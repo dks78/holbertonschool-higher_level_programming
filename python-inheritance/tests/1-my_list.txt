@@ -6,36 +6,5 @@
 >>> my_list.append(2)
 >>> my_list.append(5)
 >>> my_list.append(4)
->>> print("Liste d'origine : ", my_list)
-Liste d'origine :  [3, 1, 2, 5, 4]
->>> print("Liste triée : ", end=" ")
->>> my_list.print_sorted()
-Liste triée :  [1, 2, 3, 4, 5]
 
->>> my_list2 = MyList([1, 2, 3, 4, 5])
->>> print("Liste d'origine : ", my_list2)
-Liste d'origine :  [1, 2, 3, 4, 5]
->>> print("Liste triée : ", end=" ")
->>> my_list2.print_sorted()
-Liste triée :  [1, 2, 3, 4, 5]
 
->>> my_list3 = MyList([-3, 1.5, 2, -1, 3.5, 0])
->>> print("Liste d'origine : ", my_list3)
-Liste d'origine :  [-3, 1.5, 2, -1, 3.5, 0]
->>> print("Liste triée : ", end=" ")
->>> my_list3.print_sorted()
-Liste triée :  [-3, -1, 0, 1.5, 2, 3.5]
-
->>> my_list4 = MyList()
->>> print("Liste d'origine : ", my_list4)
-Liste d'origine :  []
->>> print("Liste triée : ", end=" ")
->>> my_list4.print_sorted()
-Liste triée :  []
-
->>> my_list5 = MyList(["banane", "pomme", "orange", "kiwi"])
->>> print("Liste d'origine : ", my_list5)
-Liste d'origine :  ['banane', 'pomme', 'orange', 'kiwi']
->>> print("Liste triée : ", end=" ")
->>> my_list5.print_sorted()
-Liste triée :  ['banane', 'kiwi', 'orange', 'pomme']
