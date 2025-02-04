@@ -10,10 +10,11 @@ Classes:
 - BaseGeometry: An empty class that serves as a base for geometric shapes.
 """
 
+
 class BaseGeometry:
     """
     A base class for geometry-related operations.
 
-    This class is currently empty and will be expanded in future implementations.
+    This class is currently empty and
     """
     pass
