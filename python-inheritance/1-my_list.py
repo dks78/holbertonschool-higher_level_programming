@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module MyList
 Ce module définit une classe MyList qui hérite de list et ajoute une méthode print_sorted().
