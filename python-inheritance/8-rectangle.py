@@ -3,13 +3,7 @@
 Module BaseGeometry
 ====================
 
-This module defines a class `
-BaseGeometry` with a method `area()`.
-
-Classes:
---------
-- BaseGeometry: A base class
-for geometric operations.
+Defines a class Rectangle that inherits from BaseGeometry.
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
