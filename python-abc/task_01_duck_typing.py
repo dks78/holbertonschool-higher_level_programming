@@ -55,3 +55,8 @@ def shape_info(shape):
 
     print(f"Aire: {shape.area()}")
     print(f"Périmètre: {shape.perimeter()}")
+circle = Circle(5)
+rectangle = Rectangle(4, 6)
+
+shape_info(circle)  # Affiche l'aire et le périmètre du cercle
+shape_info(rectangle)  # Affiche l'aire et le périmètre du rectangle
