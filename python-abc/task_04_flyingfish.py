@@ -22,4 +22,11 @@ class FlyingFish(Fish,Bird):
         print("The flying fish is swimming!")
     def habitat(self):
         print("The flying fish lives both in water and the sky!”")
-        
+
+
+flying_fish = FlyingFish()
+
+# Appeler les méthodes
+flying_fish.fly()    # Devrait afficher les messages concernant le vol
+flying_fish.swim()   # Devrait afficher les messages concernant la nage
+flying_fish.habitat()
