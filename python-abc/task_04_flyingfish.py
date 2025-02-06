@@ -61,8 +61,6 @@ class FlyingFish(Fish, Bird):
         Affiche où vit le poisson volant.
         Indique que le poisson volant vit à la fois dans l'eau et dans le ciel.
         """
-        Bird.habitat(self)
-        Fish.habitat(self)
         print("The flying fish lives both in water and the sky!")
 
 # Instancier un objet de FlyingFish
