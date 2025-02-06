@@ -45,7 +45,7 @@ class FlyingFish(Fish, Bird):
         Simule l'action de voler du poisson volant.
         Appelle la méthode fly de la classe Bird et affiche un message supplémentaire.
         """
-        Bird.fly(self)  # Appel de la méthode fly de la classe Bird
+        # Appel de la méthode fly de la classe Bird
         print("The flying fish is soaring!")
         
     def swim(self):
@@ -53,7 +53,7 @@ class FlyingFish(Fish, Bird):
         Simule l'action de nager du poisson volant.
         Appelle la méthode swim de la classe Fish et affiche un message supplémentaire.
         """
-        Fish.swim(self)  # Appel de la méthode swim de la classe Fish
+          # Appel de la méthode swim de la classe Fish
         print("The flying fish is swimming!")
     
     def habitat(self):
