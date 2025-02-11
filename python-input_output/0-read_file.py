@@ -12,6 +12,6 @@ def read_file(filename=""):
         >>> read_file("test_file.txt")
         Hello, world!
     """
-    with open(filename, "r", encoding="utf-8") as file:
-        print(file.read(), end="")
-
+    with open(filename, encoding='utf-8') as f:
+        for line in f:
+            print(line, end='')
